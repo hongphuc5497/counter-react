@@ -1,14 +1,11 @@
 import { createStore } from 'redux';
+import counterReducer from './reducers/counterReducer';
 
-const initialState = {
-  count: 0
-}
+const store = createStore(counterReducer);
 
-function reducer(state = initialState, action) {
-  console.log('reducer', state, action);
-  return state;
-}
-
-const store = createStore(reducer);
+store.dispatch({ type: 'INCREMENT' });
+store.dispatch({ type: 'INCREMENT' });
+store.dispatch({ type: 'DECREMENT' });
+store.dispatch({ type: 'RESET' });
 
 export default store;
