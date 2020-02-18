@@ -36,4 +36,22 @@
       color: #fff;
     }
   }
+
+  .resetButton {
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 600;
+
+    &:active, &:focus {
+      outline: none;
+      box-shadow: 0 0 2px rgb(87, 156, 87);
+    }
+
+    &::active {
+      background-color: rgb(87, 156, 87);
+      border-color: rgb(35, 141, 35);
+      color: #fff;
+    }
+  }
 }
